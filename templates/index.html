@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Text Summarizer</title>
+    <title>Text Summarization App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   </head>
   <body>
     <main>
-      <h1>Text summarization</h1>
-      <p class="lead">
-        Upload a plain-text <code>.txt</code> file. The app sends it to Groq and shows the original
-        text next to an AI-generated summary.
-      </p>
+      <header class="intro">
+        <h1>Text Summarization App</h1>
+        <p class="lead">
+          Upload a plain-text <code>.txt</code> file. The app sends it to Groq and shows the original
+          text next to an AI-generated summary.
+        </p>
+      </header>
 
       <section class="card" aria-labelledby="upload-heading">
         <h2 id="upload-heading" class="visually-hidden">Upload</h2>
