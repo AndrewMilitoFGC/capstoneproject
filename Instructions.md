@@ -19,8 +19,6 @@ The application focuses on integrating file handling, backend processing, and AI
 
 ## Project Structure
 
-Target layout for the capstone (adjust names if your course specifies different conventions):
-
 ```text
 capstoneproject/
 ├── app.py                 # Flask app: routes, upload handling, Groq client calls
@@ -38,10 +36,6 @@ capstoneproject/
 └── uploads/             # Optional: temporary storage for uploads (gitignored)
 ```
 
-**Notes**
-
-- Keep API keys out of source control; load them from environment variables (for example with `python-dotenv` in development only).
-- If you do not persist uploads to disk, you can process the file in memory and omit `uploads/`.
 
 ## Setup Instructions
 
@@ -115,10 +109,3 @@ Open the URL shown in the terminal (often `http://127.0.0.1:5000`) in a browser.
 - Upload a small `.txt` file and confirm original + summary areas update.
 - Confirm non-`.txt` uploads are rejected with a clear message.
 - Confirm errors (network failure, invalid key, empty file) show a user-friendly error instead of a raw stack trace in production.
-
-## Optional Improvements (for grading and maintainability)
-
-- **Input limits:** Cap file size and character count before calling Groq to avoid timeouts and cost surprises.
-- **Model name in config:** Store the Groq model id in `.env` or a small config section so you can change it without editing route logic.
-- **Logging:** Log server-side errors; avoid logging file contents or API keys.
-- **Tests:** Add a few unit tests for text extraction and validation (even if API calls are mocked).
