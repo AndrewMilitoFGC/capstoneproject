@@ -64,11 +64,20 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .upload-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 input[type="file"] {
@@ -106,6 +115,8 @@ button:disabled {
   font-size: 0.9rem;
   color: var(--muted);
   margin-top: 0.75rem;
+  text-align: center;
+  max-width: 52ch;
 }
 
 .grid {
@@ -157,6 +168,10 @@ button:disabled {
 
 .banner.visible {
   display: block;
+  text-align: center;
+  max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .banner.error {
