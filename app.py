@@ -9,6 +9,7 @@ import logging
 import os
 import threading
 import webbrowser
+from pathlib import Path
 from typing import Tuple
 
 from dotenv import load_dotenv
@@ -17,7 +18,8 @@ from groq import Groq
 from groq import GroqError
 from werkzeug.exceptions import RequestEntityTooLarge
 
-load_dotenv()
+_PROJECT_ROOT = Path(__file__).resolve().parent
+load_dotenv(_PROJECT_ROOT / ".env")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
